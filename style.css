@@ -13,7 +13,9 @@
     --white: #FFF;
     --Greysh-Turquoise:#5E7A7D;
     --squeeze:#F3F9FA;
-    --Sherpa-blue: #00474B; 
+    --Sherpa-blue: #00474B;
+    --Beetle-green:#547878;
+    --Topaz: #26C2AE; 
 }
 
 body {
@@ -71,13 +73,43 @@ div{
         }
     }
 
+   .input-box:has(input:focus){
+    outline: 2px solid var(--Topaz);
+   }
+
     .tip > div{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.6rem;
+        margin-top: 1rem;
+
+        button{
+            border: none;
+            background: var(--Sherpa-blue);
+            color: var(--white);
+            font-size: 2.4rem;
+            border-radius: .5rem;
+            padding-block: .6rem;
+            font-weight: 700;
+        }
 
         input{
-            width: 100%; 
+            width: 100%;
+            background: var(--squeeze);
+            font-size: 2.4rem;
+            text-align: center;
+            border: none;
+            border-radius: .5rem;
+            outline: none;
+            color: var(--Sherpa-blue);
+
+        &::placeholder{
+      color: var(--Beetle-green);
         }
+       
+        &::focus{
+            outline: 2px solid var(--Topaz);
+        }
+    }
     }
 }
