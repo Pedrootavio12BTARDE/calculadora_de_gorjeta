@@ -6,3 +6,78 @@
     font-family: "Space Mono", monospace;
 
 }
+
+:root {
+    font-size: 62.5%;
+    --jagged-ice: #C5E4E7;  
+    --white: #FFF;
+    --Greysh-Turquoise:#5E7A7D;
+    --squeeze:#F3F9FA;
+    --Sherpa-blue: #00474B; 
+}
+
+body {
+    font-size: 1.6rem;
+    background: var(--jagged-ice);
+}
+
+header{
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background: var(--white);
+    border-radius: 2.5rem 2.5rem 0 0;
+    padding: 3.2rem 2.4rem;
+}
+
+.info {
+    padding-inline: .8rem;
+
+    strong{
+ color: var(--Greysh-Turquoise);
+ display: block;
+ margin-bottom: .6rem;
+    }
+
+div{
+    margin-bottom: 3.2rem;
+}
+    .input-box{
+        background:var(--squeeze);
+        padding: .6rem 1.8rem;
+        border-radius: .5rem;
+        display: flex;
+        align-items: center;
+    
+        input{
+            background: transparent;
+            border: none;
+            text-align: right;
+            width: 100%;
+            outline: none;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--Sherpa-blue);
+        }
+
+        input::placeholder{
+             color: var(--Sherpa-blue);
+             opacity: 0.35;
+        }
+    }
+
+    .tip > div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.6rem;
+
+        input{
+            width: 100%; 
+        }
+    }
+}
