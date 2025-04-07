@@ -17,6 +17,7 @@
     --Beetle-green:#547878;
     --Topaz: #26C2AE;
     --Regente-grey:#7F9D9F;
+    --Water-leaf:  #9FE8DF; 
 }
 
 body {
@@ -93,7 +94,16 @@ div{
             padding-block: .6rem;
             font-weight: 700;
         }
+button:hover{
+    background: var(--Water-leaf);
+    cursor: pointer;
+    transition: .3s;
+}
 
+.button-selected{
+    background: var(--Topaz);
+
+}
         input{
             width: 100%;
             background: var(--squeeze);
@@ -153,4 +163,52 @@ div{
         padding-block: .9rem;
         border-radius: .5rem;
      }
+
+     button:hover{
+        background: var(--Water-leaf);
+        cursor: pointer;
+        transition: .3s;
+     }
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    display: none;
+}
+
+@media(min-width: 920px){
+ header{
+    margin-top: 5rem;
+  }
+
+
+    main{
+        display: flex;
+        max-width: 92rem;
+        margin-inline: auto;
+        border-radius: 2.5rem;
+        padding: 4.8rem;
+        gap: 4.8rem;
+
+        section{
+            width: 100%;
+        }
+
+        .info.tip div {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .results {
+           padding: 4rem;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+
+
+            .amount strong,
+            .total strong {
+                font-size: 4,8rem;
+            }
+        }
+    }
 }
